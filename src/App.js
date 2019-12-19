@@ -7,17 +7,9 @@ import {connect} from "react-redux";
 import * as actions from "./store/actions/index";
 
 
-const Checkout = React.lazy(() => {
-	return import("./containers/Checkout/Checkout");
-});
-
-const Orders = React.lazy(() => {
-	return import("./containers/Orders/Orders");
-});
-
-const Auth = React.lazy(() => {
-	return import("./containers/Auth/Auth");
-});
+const Checkout = React.lazy(() => import("./containers/Checkout/Checkout"));
+const Orders = React.lazy(() => import("./containers/Orders/Orders"));
+const Auth = React.lazy(() => import("./containers/Auth/Auth"));
 
 const app = (props) => {
 	const {onTryAutoSignup} = props;
